@@ -122,7 +122,7 @@ export default {
 		let address = config.contract.address
 		let func = "save"
 
-		nebPay.call(address,0,func,JSON.stringify([title,text,JSON.stringify([imageUrl])]),{
+		nebPay.call(address,0,func,JSON.stringify([title,text,JSON.stringify(imageUrl?[imageUrl]:[])]),{
 			debug:false
 		})
 

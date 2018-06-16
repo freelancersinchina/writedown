@@ -159,8 +159,9 @@ class IndexPage extends React.Component {
 			(function(j){
 			events.push(
 				<div className={styles.item} onClick={()=>self.props.showDetail(days[key][j])} key={key+'-'+j}>
+				{days[key][j].images.length?(
 					<div className={styles.cover}
-						style={{backgroundImage:`url(${days[key][j].images[0]})`}}></div>
+						style={{backgroundImage:`url(${days[key][j].images[0]})`}}></div>):null}
 					<div className={styles.content}>
 						{days[key][j].title}
 					</div>
