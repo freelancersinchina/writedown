@@ -186,7 +186,8 @@ class IndexPage extends React.Component {
             <img src={Logo}/>
           </div>
           <div className={styles.menus}>
-            <a href="/">源码</a>
+            <a href="https://explorer.nebulas.io/#/address/n1m9pFy8oTZmt61s59uqaMHYCuW7RhNnwxu" target="_blank">合约</a>
+            <a href="https://github.com/freelancersinchina/writedown" target="_blank">源码</a>
           </div>
           <h1>世记</h1>
           一起记录世界上正在发生的事情
