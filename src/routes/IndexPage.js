@@ -149,11 +149,14 @@ class IndexPage extends React.Component {
 	}
 
 	let timeline = []
-	let events = []
 
-	for(var key in days){
+	for(var _key in days){
+
+		(function(key){
 		
-		for(let j=0;j<days[key].length;j++){
+		let events = []
+		for(let p=0;p<days[key].length;p++){
+			(function(j){
 			events.push(
 				<div className={styles.item} onClick={()=>self.props.showDetail(days[key][j])} key={key+'-'+j}>
 					<div className={styles.cover}
@@ -161,7 +164,7 @@ class IndexPage extends React.Component {
 					<div className={styles.content}>
 						{days[key][j].title}
 					</div>
-				</div>)
+				</div>)})(p)
 		}
 		timeline.push(
 			<Timeline.Item key={key}>
@@ -174,6 +177,7 @@ class IndexPage extends React.Component {
 			</Timeline.Item>
 
 		)
+		})(_key)
 		
 
 	}
